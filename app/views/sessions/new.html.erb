@@ -1,0 +1,22 @@
+<div>
+  <h1>Log in</h1>
+</div>
+
+<div class="row">
+  <%= form_with(ufl: login_path, scope: :session, local: true) do |f| %>
+  
+  <div>
+    <%= f.label :email, 'Email' %>
+    <%= f.email_field :email %>
+  </div>
+  
+  <div>
+    <%= f.label :email, 'Password' %>
+    <%= f.password_field :password %>
+  </div>
+  
+  <%= f.submit 'Log in' %>
+  <% end %>
+  
+  <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
+</div>
